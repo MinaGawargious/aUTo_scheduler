@@ -50,8 +50,8 @@ startDay = startDays[semester].findPrevious().text
 endDay = endDays[semester].findPrevious().text
 
 # ----- Get the user's schedule into a useful array -----
-userScheduleElems = browser.find_elements_by_tag_name("tr")[1:]
-userScheduleInfo = [[td.text for td in userScheduleElems[i].find_elements_by_tag_name("td")][2:-1] for i in range(len(userScheduleElems))] ################################COMMENT THIS
+userScheduleElems = browser.find_elements_by_tag_name("tr")[1:] # User's schedule is an a table, where each row is a course (including class, recitation, lab...)/ userScheduleElems is an array of all the table rows for all the user's classes. Omit the top row, which just has headers for the table.
+userScheduleInfo = [[td.text for td in userScheduleElems[i].find_elements_by_tag_name("td")][2:-1] for i in range(len(userScheduleElems))] # For each course, we have an array of the unique id, course number, title, building, room, days, time, and remarks. We don't care about unique id, course number, or remarks, so omit them. 
 
 # -----Replace building codes with their full names ("EER" -> "Engineering Education and Research Center") so Google Calendar can auto suggest the exact address when filling it in. -----
 for course in userScheduleInfo:
