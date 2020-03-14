@@ -3,6 +3,7 @@ An tool to automate moving my UT course schedule to Google Calendar.
 
 Dependencies: selenium, requests, bs4, time, os, pyautogui, platform
 Must download webdriver for your desired browser. Chrome and Firefox are linked below:
+
   Chrome chromedriver: https://chromedriver.chromium.org/downloads
   Firefox geckodriver: https://github.com/mozilla/geckodriver/releases
 
