@@ -11,5 +11,5 @@ After downloading, either add the driver to your PATH environment variable or up
 
 Then, paste the path to your desired browser into the pathToBrowser variable. This is used to open the browser from the command prompt since, for security purposes, Google does not allow selenium webdriver to log in to Google accounts. So, instead of browser automation for writing to Google Calendar, this program uses GUI automation to control the keyboard directly so Google can not detect it.
 
-Gif of it running. It took 1 minute 30 seconds for 4 classes, 1 recitation, and 1 lab:
+Gif of it running. It took 1 minute 30 seconds for 4 classes, 1 recitation, and 1 lab. Gif makes it look a lot slower than it actually is:
 ![](presentation.gif)
